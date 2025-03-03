@@ -3,7 +3,7 @@ package e2;
 import java.util.*;
 
 public class LogicsImpl implements Logics {
-	
+
 	private final Pair<Integer,Integer> pawn;
 	private Pair<Integer,Integer> knight;
 	private final Random random = new Random();
@@ -44,5 +44,10 @@ public class LogicsImpl implements Logics {
 	@Override
 	public boolean hasPawn(int row, int col) {
 		return this.pawn.equals(new Pair<>(row,col));
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return this.knight==null && this.pawn==null;
 	}
 }
