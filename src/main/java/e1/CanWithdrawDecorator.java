@@ -2,7 +2,7 @@ package e1;
 
 public class CanWithdrawDecorator extends BankAccountDecorator{
 
-    private int maxOverdraft;
+    private final int maxOverdraft;
 
     public CanWithdrawDecorator(BankAccount base, int maxOverdraft) {
         super(base);
