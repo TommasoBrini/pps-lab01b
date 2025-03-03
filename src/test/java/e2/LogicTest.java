@@ -33,4 +33,12 @@ public class LogicTest {
     assertTrue(this.logics.hit(DEFAULT_PAWN_ROW, DEFAULT_PAWN_COLUMN));
   }
 
+  @Test
+  public void testKnightPosition(){
+    this.createDefaultLogics();
+    assertTrue(this.logics.hasKnight(DEFAULT_KNIGHT_ROW, DEFAULT_KNIGHT_COLUMN));
+  }
+
+
+
 }
