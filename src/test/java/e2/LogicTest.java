@@ -1,15 +1,23 @@
 package e2;
 import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class LogicTest {
+  private static final int SIZE = 5;
+
+  Logics logics;
+
+  private void createRandomLogics(){
+    logics = new LogicsImpl(SIZE);
+  }
 
   @Test
-  public void test() {
-    assert(true);
-    // TODO: Add your test logic here
-    // You can generate random inputs and assert the expected output
-    // For example:
-    // int result = Logic.someMethod(5, 10);
-    // assertEquals(expectedResult, result);
+  public void testRandomEmptyPosition(){
+    this.createRandomLogics();
+    assertFalse(this.logics.isEmpty());
   }
+
+
 }
